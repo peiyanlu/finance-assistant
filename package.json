@@ -1,0 +1,86 @@
+{
+  "name": "finance-assistant",
+  "productName": "FinanceDoc Assistant",
+  "version": "0.0.0",
+  "description": "Search & Extract Financial Documents.",
+  "license": "MIT",
+  "main": ".vite/build/main.js",
+  "scripts": {
+    "dev": "electron-forge start",
+    "build": "electron-forge make",
+    "dev:chcp:win": "chcp 65001 && electron-forge start",
+    "build:debug:win": "set DEBUG=electron-packager && electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.11.2",
+    "@electron-forge/maker-deb": "^7.11.2",
+    "@electron-forge/maker-dmg": "^7.11.2",
+    "@electron-forge/maker-msix": "^7.11.2",
+    "@electron-forge/maker-rpm": "^7.11.2",
+    "@electron-forge/maker-squirrel": "^7.11.2",
+    "@electron-forge/maker-zip": "^7.11.2",
+    "@electron-forge/plugin-fuses": "^7.11.2",
+    "@electron-forge/plugin-vite": "^7.11.2",
+    "@electron-forge/publisher-github": "^7.11.2",
+    "@electron-forge/shared-types": "^7.11.2",
+    "@electron/fuses": "^2.1.1",
+    "@varlet/touch-emulator": "^3.17.1",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "electron": "^42.2.0",
+    "typescript": "^6.0.3",
+    "unplugin-auto-import": "^21.0.0",
+    "unplugin-vue-components": "^32.1.0",
+    "vite": "^7.3.2",
+    "vite-plugin-html": "^3.2.2",
+    "@types/node": "^24.12.4",
+    "lodash": "^4.18.1"
+  },
+  "dependencies": {
+    "@peiyanlu/electron": "^1.0.11",
+    "@peiyanlu/ts-utils": "^0.0.5",
+    "@varlet/ui": "^3.17.1",
+    "@vueuse/components": "^14.3.0",
+    "@vueuse/core": "^14.3.0",
+    "dayjs": "^1.11.20",
+    "element-plus": "^2.14.0",
+    "naive-ui": "^2.44.1",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^5.7.284",
+    "xlsx": "^0.18.5",
+    "svgo": "^4.0.1",
+    "tinyglobby": "^0.2.16",
+    "vue": "^3.5.35",
+    "vue-router": "^5.1.0"
+  },
+  "keywords": [
+    "electron",
+    "finance",
+    "xlsx",
+    "pdf"
+  ],
+  "author": {
+    "name": "YanluPei",
+    "email": "peiyanlu@vip.qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peiyanlu/finance-assistant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peiyanlu/finance-assistant/issues",
+    "email": "peiyanlu@vip.qq.com"
+  },
+  "homepage": "https://github.com/peiyanlu/finance-assistant#readme",
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

@@ -1,0 +1,9 @@
+allowBuilds:
+  electron-winstaller: true
+  esbuild: true
+  fs-xattr: true # MacOS
+  macos-alias: true # MacOS
+
+nodeLinker: hoisted
+
+blockExoticSubdeps: false
