@@ -6,6 +6,7 @@ import { darkTheme, type GlobalThemeOverrides } from 'naive-ui'
 
 const styleVars = {
   '--option-font-size': '14px',
+  '--tooltip-padding': '4px 8px'
 }
 
 const isDark = useDark()

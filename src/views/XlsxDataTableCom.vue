@@ -136,7 +136,7 @@ const handleClearFilter = () => {
       
       <var-style-provider
         :style-vars="{
-          '--tooltip-default-text-color': 'var(--primary-text-color)',
+          '--tooltip-default-text-color': 'rgba(var(--primary-color), 1)',
           '--tooltip-default-color': 'var(--button-default-color)',
         }"
         style="display: flex; align-items: center; justify-content: center;"
@@ -173,7 +173,7 @@ const handleClearFilter = () => {
   <el-table
     ref="tableRef"
     :data="sheetData"
-    :max-height="734"
+    :max-height="780"
     @filter-change="handleFilterChange"
     stripe
   >

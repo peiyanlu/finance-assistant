@@ -15,6 +15,10 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  define: {
+    APP_NAME: JSON.stringify(pkg.productName),
+    APP_VERSION: JSON.stringify(`v${ pkg.version }`),
+  },
   build: {
     license: true,
   },

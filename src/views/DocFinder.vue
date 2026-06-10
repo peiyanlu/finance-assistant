@@ -13,9 +13,7 @@ const loading = ref(false)
       description="LOADING"
       :loading="loading"
     >
-      <div class="app-container">
-        <PdfExtractByXlsx v-model:loading="loading" />
-      </div>
+      <PdfExtractByXlsx v-model:loading="loading" />
     </var-loading>
   </div>
 </template>
@@ -41,22 +39,6 @@ const loading = ref(false)
         z-index: 999;
       }
     }
-  }
-}
-
-.app-container {
-  width: 100%;
-  min-width: 640px;
-  height: 100%;
-  margin-right: 8px;
-  overflow-y: scroll;
-  padding: 16px calc(16px - var(--scrollbar-width)) 16px 16px;
-  display: grid;
-  grid-template-rows: 166px 1fr;
-  gap: 16px;
-  
-  &::-webkit-scrollbar {
-    background-color: transparent;
   }
 }
 </style>

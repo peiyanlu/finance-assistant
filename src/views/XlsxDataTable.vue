@@ -53,7 +53,7 @@ const handleXlsxDataChange = (data: XlsxRaw[]) => {
       >
         <var-select
           v-if="xlsxFilteredData.length"
-          placeholder="选择搜索字段"
+          placeholder="选择匹配列"
           v-model="selectedColumn"
           @change="handleSelected"
           @clear="handleCleared"
@@ -87,15 +87,7 @@ const handleXlsxDataChange = (data: XlsxRaw[]) => {
   display: flex;
   flex-flow: column nowrap;
   gap: 16px;
-}
-
-.table-footer {
-  width: 100%;
-  height: 46px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  flex-shrink: 0;
+  min-width: 0;
+  min-height: 0;
 }
 </style>

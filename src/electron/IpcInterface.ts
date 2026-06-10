@@ -11,6 +11,17 @@ export interface XlsxRaw {
   [k: string]: string
 }
 
+
+export interface XlsxInfo {
+  data: { sheetName: string; rowCount: number }[]
+  size: string
+}
+
+export interface PdfInfo {
+  numPages: number
+  size: string
+}
+
 export interface XlsxReadResult {
   key: string
   value: XlsxRaw[]
@@ -20,31 +31,27 @@ export interface PdfMatchOptions {
   search: string[]
 }
 
+export type PdfMatched = [ string, number ]
+
 export interface PdfMatchResult {
   numPages: number
-  matchedPages: number[]
+  matchedPages: PdfMatched[]
+  pdfBytes: Uint8Array
 }
 
-export interface PdfExtractOptions {
-  matchedPages: number[]
-}
-
-export interface PdfExtractResult {
-  output: string
-}
 
 export interface FileIpcInterface {
-  readXlsx(input: string, opts?: XlsxReadOptions): Promise<XlsxReadResult[]>
+  readXlsxInfo(input: ArrayBuffer): Promise<XlsxInfo>
+  
+  readPdfInfo(input: ArrayBuffer): Promise<PdfInfo>
   
   readXlsx(input: ArrayBuffer, opts?: XlsxReadOptions): Promise<XlsxReadResult[]>
   
-  readPdf(input: string, opts: PdfMatchOptions): Promise<PdfMatchResult>
+  matchPdf(input: ArrayBuffer, opts: PdfMatchOptions): Promise<PdfMatchResult>
   
-  readPdf(input: ArrayBuffer, opts: PdfMatchOptions): Promise<PdfMatchResult>
+  readPath(input: string): Promise<ArrayBuffer>
   
-  extractPdf(input: string, opts: PdfExtractOptions): Promise<PdfExtractResult>
-  
-  extractPdf(input: ArrayBuffer, opts: PdfExtractOptions): Promise<PdfExtractResult>
+  writeFile(output: string, data: Uint8Array): Promise<void>
 }
 
 export type FileModuleMethod = AsyncMethodsOf<FileIpcInterface>;

@@ -39,7 +39,7 @@ ElectronHost.openMainWindow({
       preload: require.resolve('./preload.js'),
       sandbox: true,
     },
-    width: 1200,
+    width: 1232,
     height: 750,
     icon: appIcon,
     frontendURL,
@@ -75,6 +75,8 @@ ElectronHost.openMainWindow({
   })
   .then(async (window) => {
     if (!window) return
+    
+    window.maximize()
     
     globalShortcut.register('CmdOrCtrl+Shift+I', () => {
       BrowserWindow.getFocusedWindow()?.webContents.toggleDevTools()
