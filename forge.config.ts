@@ -7,6 +7,7 @@ import { FusesPlugin } from '@electron-forge/plugin-fuses'
 import { VitePlugin } from '@electron-forge/plugin-vite'
 import type { ForgeConfig } from '@electron-forge/shared-types'
 import { FuseV1Options, FuseVersion } from '@electron/fuses'
+import { isLinux } from '@peiyanlu/electron'
 import { join } from 'path'
 import pkg from './package.json'
 
@@ -15,12 +16,14 @@ const iconResDir = 'resources/icons'
 
 const joinPath = (...paths: string[]) => join(__dirname, iconResDir, ...paths)
 
+const executableName = isLinux ? pkg.productName.toLowerCase() : undefined
+
 
 export default {
   packagerConfig: {
     asar: true,
     icon: joinPath('icon'),
-    name: pkg.name,
+    executableName,
     extraResource: [
       iconResDir,
     ],
@@ -40,12 +43,14 @@ export default {
     new MakerRpm({
       options: {
         icon: joinPath('icon.png'),
+        bin: executableName,
       },
     }),
     // Linux debian，ubuntu
     new MakerDeb({
       options: {
         icon: joinPath('icon.png'),
+        bin: executableName,
       },
     }),
   ],
@@ -87,7 +92,7 @@ export default {
       config: {
         repository: {
           owner: 'peiyanlu',
-          name: 'finance-assistant',
+          name: 'finance-doc-assistant',
         },
         draft: false,
         prerelease: false,

@@ -1,6 +1,6 @@
 {
-  "name": "finance-assistant",
-  "productName": "FinanceDoc Assistant",
+  "name": "finance-doc-assistant",
+  "productName": "Finance Doc Assistant",
   "version": "0.0.2",
   "description": "Search & Extract Financial Documents.",
   "license": "MIT",
@@ -64,13 +64,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/peiyanlu/finance-assistant.git"
+    "url": "https://github.com/peiyanlu/finance-doc-assistant.git"
   },
   "bugs": {
-    "url": "https://github.com/peiyanlu/finance-assistant/issues",
+    "url": "https://github.com/peiyanlu/finance-doc-assistant/issues",
     "email": "peiyanlu@vip.qq.com"
   },
-  "homepage": "https://github.com/peiyanlu/finance-assistant#readme",
+  "homepage": "https://github.com/peiyanlu/finance-doc-assistant#readme",
   "os": [
     "win32",
     "darwin",

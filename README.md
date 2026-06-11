@@ -1,4 +1,4 @@
-# finance-assistant
+# finance-doc-assistant
 
 Search & Extract Financial Documents.
 

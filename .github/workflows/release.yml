@@ -41,7 +41,7 @@ jobs:
       - name: Install Deps
         run: |
           pnpm config list
-          pnpm install
+          pnpm install --frozen-lockfile
       
       - name: Publish App
         run: pnpm exec electron-forge publish --no-git-checks
