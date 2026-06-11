@@ -1,7 +1,7 @@
 {
   "name": "finance-assistant",
   "productName": "FinanceDoc Assistant",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Search & Extract Financial Documents.",
   "license": "MIT",
   "main": ".vite/build/main.js",
