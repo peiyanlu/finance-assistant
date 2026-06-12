@@ -4,6 +4,8 @@
   "version": "0.0.3",
   "description": "Search & Extract Financial Documents.",
   "license": "MIT",
+  "type": "commonjs",
+  "private": true,
   "main": ".vite/build/main.js",
   "scripts": {
     "dev": "electron-forge start",
